@@ -61,7 +61,9 @@ $ProductName = $_POST['ProductName'];
 $Price = $_POST['Price'];
 $Text = $_POST['Text'];
 
-
+if (!file_exists('uploads')) {
+    mkdir('uploads', 0777, true);
+}
 
 if (!empty($CategoryName)){
 
